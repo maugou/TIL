@@ -18,17 +18,20 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username: jekyll
+title: Today I Learned
+description:
+baseurl: "/TIL" # the subpath of your site, e.g. /blog
+url: "https://maugou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+email:
 
+github_username: maugou
+
+# Aux links for the upper right navigation
+aux_links:
+  "GitHub":
+    - "//github.com/maugou/TIL"
+
+footer_content: ""
 # Build settings
 theme: "just-the-docs"
 plugins:
@@ -52,3 +55,30 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Define Jekyll collections
+collections:
+  # home:
+  #   permalink: "/:collection/:path/"
+  #   output: true
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+just_the_docs:
+  # Define which collections are used in just-the-docs
+  collections:
+    # home:
+    #   name: Home
+    #   nav_exclude: true
+    # Reference the "docs" collection
+    docs:
+      # Give the collection a name
+      name: Documentation
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
