@@ -5,8 +5,6 @@ title: Debugging
 
 # **Debugging**
 
----
-
 ## Chrome 개발자도구에서 JS 디버깅
 
 개발자도구의 Sources 탭에서 디버깅을 한다.<br>
@@ -30,6 +28,13 @@ title: Debugging
 
 이벤트가 발생하고 리스너 코드에서 중단하고자 할 때 사용한다. ex) 클릭 후 실행되는 코드에서 중단<br>
 Event Listener Breakpoints 창에서 이벤트 카테고리 중 특정 이벤트를 선택하여 사용한다.
+
+### 설정
+
+**Blackboxing**
+
+디버깅 시 특정 라이브러리에 대해 디버깅 과정에서 제외시키는 설정 <br>
+참조: <https://developers.google.com/web/tools/chrome-devtools/javascript/step-code?hl=ko>
 
 <br>
 
