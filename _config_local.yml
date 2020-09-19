@@ -20,8 +20,8 @@
 
 title: Today I Learned
 description:
-baseurl: "/TIL" # the subpath of your site, e.g. /blog
-url: "https://maugou.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 email:
 
 github_username: maugou
@@ -33,9 +33,10 @@ aux_links:
 
 footer_content: ""
 # Build settings
+theme: "just-the-docs"
 plugins:
   - jekyll-feed
-remote_theme: pmarsceill/just-the-docs
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
