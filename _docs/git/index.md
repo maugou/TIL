@@ -36,3 +36,16 @@ upstream과 origin remote 저장소가 있으면 local에서 코드 수정하고
 - git checkout [branchName] : branch 변경
 
 ...
+
+### 에러 대응
+
+**로컬과 원격 저장소의 기록 시작이 다를 경우**
+
+- 증상 : git pull이 되지 않는다.
+  (refusing to merge unrelated histories)
+
+- 해결 : 병합을 통해 pull이 되도록 한다.
+
+```
+git pull origin 브런치명 --allow-unrelated-histories
+```
