@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Redux
+has_children: true
+has_toc: false
 ---
 
 # **Redux**
