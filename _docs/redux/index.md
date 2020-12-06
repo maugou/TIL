@@ -5,17 +5,17 @@ has_children: true
 has_toc: false
 ---
 
-# **Redux**
+# Redux
 
 ---
+### 규칙
+- state를 직접 변경해서는 안된다.
+- reducer는 side effect를 가지면 안된다.
+- app당 하나의 store만 존재해야 한다.
+- 전체 state 트리는 불변성을 가지는 것을 권장한다.
 
-**Actions**<br>
-액션은 JS 객체 형태이다. 반드시 type 속성을 가지고 있으며, 값은 문자열 형태가 일반적이다. <br>
-액션은 dispatch(Action) 를 통해 스토어에 전달된다. (상태 변경하기 위한 유일한 방법)
-
-**Reducers**<br>
-기존의 상태와 액션을 받아서 상태를 변경시킨 후 반환시킨다. 다만, 인수는 변경하지 않는 순수함수여야 한다.
-
-**Store**<br>
-스토어는 상태를 저장한다.
-
+### 추천
+- redux toolkit<br/>
+  thunk 및 immer 등의 기능들이 기본적으로 제공되며 redux 사용을 보다 간편하게 해준다.
+- immer<br/>
+  불변성 관리 라이브러리
