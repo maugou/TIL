@@ -73,3 +73,10 @@ const Exam = ({name}) => {
 }
 
 ```
+
+## useMemo / useCallback
+useMemo를 사용하지 않고 동작 구현이 된다면, 성능을 최적화시키는 용도로 추가 사용한다.
+기억된 값을 반환한다. 의존성 배열의 값이 변경되었을 때에만 값을 새롭게 계산한다.
+
+useCallback(fn, deps)는 useMemo(()=> fn, deps)와 같다.
+즉, useCallback은 기억된 callback을 반환하며, 의존성이 변경되었을 때 callback을 새롭게 나타낸다.
