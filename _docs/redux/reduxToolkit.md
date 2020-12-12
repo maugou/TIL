@@ -107,6 +107,36 @@ const counter = createReducer({ value: 0 }, (builder) => {
 builder methods는 addCase, addMatcher, addDefaultCase가 있다.
 
 
+## createSlice
+내부적으로 createAcion과 createReducer를 사용한다.
+
+**Parameters**<br/>
+name: action type의 접두사로 사용된다.<br/>
+initialState: 초기 state<br/>
+reducers: reducer를 정의하되 해당 key 이름으로 createAction이 된다.
+
+```js
+const counter = createSlice({
+  name: 'counter'.
+  initialState: { value: 0 },
+  reducers: {
+    increment: (state, action) => {
+      state.value++
+    }
+  }
+})
+
+// action 생성자 increment
+const { increment } = counter.actions
+
+// reducer
+const rootReducer = combineReducers({
+  counter: counter.reducer
+})
+```
+
+extraReducers: 정의된 action type이 아닌 action type에 의해 실행 시킬 수 있다.<br/>
+(기본예시) createThunk와 사용 시 promise의 상태에 따라 reducer 실행 가능
 
 
 --- 
