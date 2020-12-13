@@ -136,7 +136,45 @@ const rootReducer = combineReducers({
 ```
 
 extraReducers: 정의된 action type이 아닌 action type에 의해 실행 시킬 수 있다.<br/>
-(기본예시) createThunk와 사용 시 promise의 상태에 따라 reducer 실행 가능
+(기본예시) createAsyncThunk와 사용 시 promise의 상태에 따라 reducer 실행 가능
+
+## createAsyncThunk
+return 값은 promise 상태 생명주기 중 fulfilled에 응답한다. rejected에 반응하기 위해서는 rejectWithValue를 통해 값을 반환하면 된다.
+
+**Parameters**<br/>
+type: action type으로 promise 상태 생명주기가 붙는다.<br/>
+(기본예시) type이 "example/request" 일 경우 "example/request/pending" 이 후에 연산 결과에 따라 "example/request/fulfilled" 또는 "example/request/rejected" action type이 보내진다.
+
+```js
+const example = createAsyncThunk("example/request", async (age, thunkAPI) => {
+    try {
+      const res = await fetch( ... )
+    
+      return "fulfilled"
+    } catch {
+      return thunkAPI.rejectWithValue("rejected")
+    }
+  }
+)
+
+const counter = createSlice({
+  name: "counter",
+  initialState: { value: 0 },
+  reducers: {},
+  extraReducers: {
+    [example.fulfilled]: (state, action) =>{
+      console.log(action.payload) // returns "fulfilled"
+    },
+    [example.rejected]: (state, action) => {
+      console.log(action.payload) // returns "rejected"
+    }
+  }
+})
+```
+
+
+
+
 
 
 --- 
