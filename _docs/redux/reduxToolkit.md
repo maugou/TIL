@@ -146,7 +146,7 @@ type: action type으로 promise 상태 생명주기가 붙는다.<br/>
 (기본예시) type이 "example/request" 일 경우 "example/request/pending" 이 후에 연산 결과에 따라 "example/request/fulfilled" 또는 "example/request/rejected" action type이 보내진다.
 
 ```js
-const example = createAsyncThunk("example/request", async (age, thunkAPI) => {
+const example = createAsyncThunk("example/request", async (arg, thunkAPI) => {
     try {
       const res = await fetch( ... )
     
