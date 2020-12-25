@@ -4,8 +4,18 @@ title: GitHub
 parent: Git
 ---
 
-# **GitHub**
+# GitHub
 
+{: .no_toc}
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
+{:toc}
+</details>
 ---
 
 ## Flow
@@ -65,3 +75,18 @@ ex) authentication, make-avatar ...
 프로젝트 관리자의 검토가 완료되면 마스터브랜치와 병합한다.<br>
 이때 closes #issue번호를 적으면 병합과 함께 해당 이슈도 닫힌다.
 만약, 풀리퀘스트 생성 시 linked issues를 통해 이슈를 연결해 놓았다면 closes #issue번호가 없어도 자동으로 닫힌다.
+
+
+## SSH key 생성 및 설정
+Mac OS 기준
+```shell
+ssh-keygen -t ed25519 -C "your_email@example.com"
+``` 
+생성 후에 
+github의 설정에 추가하기 위한 값 복사
+```
+// 공개키 파일명은 생성된 것으로
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+github - SSH keys에 새로운 키를 추가하여 복사한 값을 붙여넣고 추가하면 된다.
