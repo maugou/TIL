@@ -80,13 +80,13 @@ ex) authentication, make-avatar ...
 ## SSH key 생성 및 설정
 Mac OS 기준
 ```shell
-ssh-keygen -t ed25519 -C "your_email@example.com"
+$ ssh-keygen -t ed25519 -C "your_email@example.com"
 ``` 
 생성 후에 
 github의 설정에 추가하기 위한 값 복사
 ```
 // 공개키 파일명은 생성된 것으로
-pbcopy < ~/.ssh/id_ed25519.pub
+$ pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 github - SSH keys에 새로운 키를 추가하여 복사한 값을 붙여넣고 추가하면 된다.

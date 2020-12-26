@@ -88,3 +88,23 @@ fatal: Could not read from remote repository.
 ```shell
 $ chmod 400 id_rsa
 ```
+
+
+## Commit patch
+```shell
+$ git format-patch [commit hash]
+```
+선택한 commit hash부터 마지막 commit 까지의 patch를 생성한다.<br>
+만약 갯수로 제한하고 싶다면,
+```shell
+$ git format-patch -4
+```
+이 경우 가장 최근에 반영된 commit 4개를 patch로 생성한다.
+
+생선된 patch를 특정 프로젝트에 적용하기 위한 명령어는 아래와 같다.
+```shell
+$ git am [patch 파일명]
+```
+
+
+
