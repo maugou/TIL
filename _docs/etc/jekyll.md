@@ -32,3 +32,37 @@ export JEKYLL_GITHUB_TOKEN=[personal access token]
 ```
 
 - 재실행 하면 경고없이 시작된다.
+
+---
+
+**현상**
+```shell
+...
+# 에러
+listen-3.2.1 requires ruby version >= 2.2.7, ~> 2.2, which is incompatible with the current version, ruby 3.0.1p64
+
+...
+```
+
+<br>
+**해결**
+- bundle update listen 실행
+
+---
+
+**현상**
+```shell
+...
+# 에러
+bundler: failed to load command: jekyll (/usr/local/lib/ruby/gems/3.0.0/bin/jekyll)
+/usr/local/lib/ruby/gems/3.0.0/gems/jekyll-3.9.0/lib/jekyll/commands/serve/servlet.rb:3:in 'require': cannot load such file -- webrick (LoadError)
+
+...
+```
+
+<br>
+**해결**
+<br>
+webrick 추가
+- bundle add webrick
+
