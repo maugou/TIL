@@ -6,7 +6,3 @@ layout: home
 ---
 
 # **Today I Learned**
-
----
-
-## _학습한 내용을 기록하자_
