@@ -36,6 +36,7 @@ export JEKYLL_GITHUB_TOKEN=[personal access token]
 ---
 
 **현상**
+
 ```shell
 ...
 # 에러
@@ -51,6 +52,7 @@ listen-3.2.1 requires ruby version >= 2.2.7, ~> 2.2, which is incompatible with 
 ---
 
 **현상**
+
 ```shell
 ...
 # 에러
@@ -66,3 +68,22 @@ bundler: failed to load command: jekyll (/usr/local/lib/ruby/gems/3.0.0/bin/jeky
 webrick 추가
 - bundle add webrick
 
+---
+
+**현상**
+
+```shell
+...
+# 에러
+/usr/local/opt/ruby/bin/bundle:23:in load: cannot load such file -- /usr/local/lib/ruby/gems/3.0.0/gems/bundler-2.2.17/exe/bundle (LoadError)
+        from /usr/local/opt/ruby/bin/bundle:23:in <main>
+
+```
+
+<br>
+**해결**
+<br>
+ruby버전 업데이트에 따른 증상으로 Gemfile.lock 삭제 후 다시 생성
+```
+bundle install
+```
