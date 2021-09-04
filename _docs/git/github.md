@@ -76,17 +76,36 @@ ex) authentication, make-avatar ...
 이때 closes #issue번호를 적으면 병합과 함께 해당 이슈도 닫힌다.
 만약, 풀리퀘스트 생성 시 linked issues를 통해 이슈를 연결해 놓았다면 closes #issue번호가 없어도 자동으로 닫힌다.
 
-
 ## SSH key 생성 및 설정
+
 Mac OS 기준
+
 ```shell
 $ ssh-keygen -t ed25519 -C "your_email@example.com"
-``` 
-생성 후에 
-github의 설정에 추가하기 위한 값 복사
 ```
+
+생성 후에
+github의 설정에 추가하기 위한 값 복사
+
+```shell
 // 공개키 파일명은 생성된 것으로
 $ pbcopy < ~/.ssh/id_ed25519.pub
 ```
 
 github - SSH keys에 새로운 키를 추가하여 복사한 값을 붙여넣고 추가하면 된다.
+
+---
+
+**ssh key 변경에 따른 remote 저장소 연결 에러 대응**
+
+```
+Host key verification failed. fatal: Could not read from remote repository.
+...
+```
+
+- 해결<br>
+  .ssh 파일 내 known_hosts에 github key 추가
+
+```shell
+$ ssh-keyscan github.com >> ~/.ssh/known_hosts
+```
