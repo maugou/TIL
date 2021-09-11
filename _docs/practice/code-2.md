@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 코딩-2 [해시]
+title: 코딩-2
 parent: 코딩 문제
 ---
 

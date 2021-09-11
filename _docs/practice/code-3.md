@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 코딩-3 [정렬]
+title: 코딩-3
 parent: 코딩 문제
 ---
 
