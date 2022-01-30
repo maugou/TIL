@@ -61,3 +61,12 @@ manifest에 activity 요소 선언해야만 사용 가능
 
 **생명 주기**<br/>
 ![](../../../images/android/activity_lifecycle.png)
+
+---
+**android studio Error**
+- Cannot run program "node"
+
+android studio 아래 명령어로 실행
+```
+$ open -a "Android Studio.app"
+```
