@@ -109,3 +109,21 @@ Host key verification failed. fatal: Could not read from remote repository.
 ```shell
 $ ssh-keyscan github.com >> ~/.ssh/known_hosts
 ```
+
+---
+**git history에 100M이상의 파일이 있을 경우**
+
+- github에 push가 되지 않기 때문에 history에서 해당 파일을 정리해야 한다.
+- BFG Repo-Cleaner를 이용
+
+```
+brew install bfg
+```
+
+```
+bfg --strip-blobs-bigger-than 100M [폴더 경로] // clean
+
+git reflog expire --expire=now --all && git gc --prune=now --aggressive
+```
+
+위 작업 후 push 하면 정상적으로 push가 된다. 단, 커밋 해시값이 달라지기 때문에 해당 작업 시 확인 필수!
