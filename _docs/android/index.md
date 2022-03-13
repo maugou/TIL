@@ -70,3 +70,24 @@ android studio 아래 명령어로 실행
 ```
 $ open -a "Android Studio.app"
 ```
+
+---
+ 
+### Gradle v7에 따른 maven 저장소
+Maven 저장소는 보안 프로토콜(예: HTTPS)로 전환하거나 비보안 프로토콜을 허용해야 한다.
+
+- build.gradle(module)
+```
+allprojects {
+  repositories {
+     maven { url 'https:// .....' }
+
+     // or 
+
+     maven {
+        url 'http:// ...... '
+        allowInsecureProtocol true
+     }
+  }
+}
+```
