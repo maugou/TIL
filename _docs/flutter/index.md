@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Flutter
+has_children: true
+has_toc: false
 ---
 
 - [Class 참고](https://api.flutter.dev/flutter/material/material-library.html#classes)
