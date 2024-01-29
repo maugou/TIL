@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Builder 패턴
-parent: 디자인 패턴
+title: Builder
+parent: 패턴
+---
+
+# Builder 패턴
+
 ---
 
 객체의 생성을 보다 단계적으로 할수 있도록 한다.<br/>
