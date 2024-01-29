@@ -12,7 +12,7 @@ Model, View, View Model 세 가지 요소로 구분된다.
 
 ![](../../../images/pattern/mvvm.png)
 
-- View : 사용자에게 보여지는 화면 (UI) 이다
+- View : 사용자에게 보여지는 화면(UI)
 - ViewModel : UI에서 사용되는 상태와 동작을 관리
 - Model : 애플리케이션 data(서버로부터 수신 등)와 비즈니스 로직
 
